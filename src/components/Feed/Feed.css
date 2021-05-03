@@ -1,0 +1,24 @@
+.feed {
+  background-color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feed__posts {
+  flex: 1;
+  width: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feed__post {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 40%;
+  /* border: 1px solid grey; */
+}

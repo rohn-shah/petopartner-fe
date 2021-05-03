@@ -1,0 +1,45 @@
+.header {
+  box-shadow: none !important;
+}
+
+.header__right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.iconPlaceholder {
+  margin-right: 5px;
+}
+
+.link {
+  color: white !important;
+  cursor: pointer;
+  display: flex;
+  text-decoration: none !important;
+}
+
+.link:hover {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.link-margin {
+  margin-right: 20px;
+}
+
+.link-margin:hover {
+  text-decoration: underline !important;
+}
+
+.header__userName {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.header__avatar {
+  margin-left: 5px;
+  height: 30px !important;
+  width: 30px !important;
+}
