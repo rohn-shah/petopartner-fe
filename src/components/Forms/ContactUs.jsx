@@ -23,7 +23,7 @@ function ContactUs() {
       bgcolor="#f5f5f5"
       borderRadius="10px"
       boxShadow="10px 10px 10px rgba(0,0,0,0.2)"
-      height="80vh"
+      height="100vh"
       width="90vw"
     >
       <Grid container spacing={0}>
@@ -34,12 +34,14 @@ function ContactUs() {
               lastName: "",
               message: "",
               email: "",
+              contactNo: ""
             }}
             validationSchema={Yup.object({
               firstName: Yup.string().required("First Name is Required"),
               email: Yup.string()
                 .required("Email is Required")
                 .email("Email is invalid"),
+              contactNo: Yup.string().required("Contact Number is Required").length( 10, "Contact Number is invalid"),
               message: Yup.string().required("Message is Required"),
             })}
             onSubmit={(values) => {
@@ -152,6 +154,29 @@ function ContactUs() {
                       id="email-helper-text"
                     >
                       {touched.email && errors.email ? errors.email : null}
+                    </FormHelperText>
+                  </FormControl>
+
+                  <FormControl
+                    variant="outlined"
+                    fullWidth
+                    style={{ marginTop: "10px" }}
+                    error={touched.contactNo && errors.contactNo ? true : false}
+                  >
+                    <InputLabel htmlFor="form-contactNo">Contact Number</InputLabel>
+                    <OutlinedInput
+                      id="form-contactNo"
+                      type="text"
+                      value={values.contactNo}
+                      onChange={handleChange("contactNo")}
+                      onBlur={handleBlur("contactNo")}
+                      labelWidth={45}
+                    />
+                    <FormHelperText
+                      error={touched.contactNo && errors.contactNo ? true : false}
+                      id="contactNo-helper-text"
+                    >
+                      {touched.contactNo && errors.contactNo ? errors.contactNo : null}
                     </FormHelperText>
                   </FormControl>
 
