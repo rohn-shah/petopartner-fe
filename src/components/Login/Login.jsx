@@ -24,6 +24,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
+  const [loading, setLoading] = useState(false);
 
   const { dispatch } = useContext(AuthContext);
 
@@ -110,9 +111,11 @@ function Login() {
                   fullWidth
                   variant="contained"
                   color="primary"
-                  onClick={() => onLoginSubmit()}
+                  onClick={() =>{
+                    setLoading(true)
+                    return  onLoginSubmit()}}
                 >
-                  Login
+                  {loading ? `Loading...` : `Login`}
                 </Button>
                 <Typography>
                   Not a member? <Link to="/signup">Signup</Link>
