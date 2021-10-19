@@ -14,7 +14,7 @@ import {
 } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import PetsIcon from "@material-ui/icons/Pets";
-import { AuthContext } from "../../store/AuthContext";
+import { AuthContext } from "store/AuthContext";
 import "./Header.css";
 
 function Header({ type, color }) {

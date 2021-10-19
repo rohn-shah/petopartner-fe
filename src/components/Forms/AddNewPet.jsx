@@ -14,7 +14,7 @@ import {
 } from "@material-ui/core";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { addPost } from "../../apis/post";
+import { addPost } from "apis/post";
 import { toast } from "react-toastify";
 
 function AddNewPet({ open, handleClose, handleCloseSave }) {

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../Header/Header";
 import moment from "moment";
-import "./BlogList.css";
 import { Box, CircularProgress, Grid } from "@material-ui/core";
-import BlogListItem from "../BlogListItem/BlogListItem";
-import { getBlogsFeed } from "../../../apis/blog";
 import { toast } from "react-toastify";
+import Header from "components/Header/Header";
+import BlogListItem from "../BlogListItem/BlogListItem";
+import { getBlogsFeed } from "apis/blog";
+import "./BlogList.css";
 
 function BlogList() {
   const [blogs, setBlogs] = useState([]);

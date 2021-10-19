@@ -9,11 +9,11 @@ import {
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import "./Post.css";
-import { AuthContext } from "../../store/AuthContext";
-import { likeDislike } from "../../apis/feed";
-import { toast } from "react-toastify";
 import { BookmarkBorder, FavoriteBorder } from "@material-ui/icons";
+import { toast } from "react-toastify";
+import { AuthContext } from "store/AuthContext";
+import { likeDislike } from "apis/feed";
+import "./Post.css";
 
 function Post({ dog, isDemo }) {
   const { state } = useContext(AuthContext);
