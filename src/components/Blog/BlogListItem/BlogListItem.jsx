@@ -7,8 +7,8 @@ import {
   Grid,
   Typography,
 } from "@material-ui/core";
-import "./BlogListItem.css";
 import { useHistory } from "react-router";
+import "./BlogListItem.css";
 
 function BlogListItem({ title, date, description, slug, user }) {
   const history = useHistory();

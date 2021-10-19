@@ -1,8 +1,8 @@
+import React, { useEffect, useState } from "react";
 import { Box, CircularProgress, Fab } from "@material-ui/core";
 import { Add } from "@material-ui/icons";
-import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { getMainFeed } from "../../apis/feed";
+import { getMainFeed } from "apis/feed";
 import AddNewPet from "../Forms/AddNewPet";
 import Header from "../Header/Header";
 import Post from "../Post/Post";

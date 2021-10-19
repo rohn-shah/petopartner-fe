@@ -16,8 +16,8 @@ import PetsIcon from "@material-ui/icons/Pets";
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./Login.css";
-import { login } from "../../apis/auth";
-import { AuthContext } from "../../store/AuthContext";
+import { login } from "apis/auth";
+import { AuthContext } from "store/AuthContext";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -111,9 +111,10 @@ function Login() {
                   fullWidth
                   variant="contained"
                   color="primary"
-                  onClick={() =>{
-                    setLoading(true)
-                    return  onLoginSubmit()}}
+                  onClick={() => {
+                    setLoading(true);
+                    return onLoginSubmit();
+                  }}
                 >
                   {loading ? `Loading...` : `Login`}
                 </Button>

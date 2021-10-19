@@ -10,11 +10,11 @@ import {
   Typography,
 } from "@material-ui/core";
 import PetsIcon from "@material-ui/icons/Pets";
-import "./Signup.css";
-import { Link, useHistory } from "react-router-dom";
-import { signup } from "../../apis/auth";
 import { toast } from "react-toastify";
-import { AuthContext } from "../../store/AuthContext";
+import { Link, useHistory } from "react-router-dom";
+import { signup } from "apis/auth";
+import { AuthContext } from "store/AuthContext";
+import "./Signup.css";
 
 function Signup() {
   const [email, setEmail] = useState("");

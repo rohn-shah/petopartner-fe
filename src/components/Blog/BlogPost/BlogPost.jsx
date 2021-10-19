@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Box, CircularProgress, Typography } from "@material-ui/core";
 import { useParams } from "react-router";
 import { toast } from "react-toastify";
-import { getBlogBySlug } from "../../../apis/blog";
-import Header from "../../Header/Header";
+import { getBlogBySlug } from "apis/blog";
+import Header from "components/Header/Header";
 import "./BlogPost.css";
 
 function BlogPost() {

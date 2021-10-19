@@ -2,7 +2,7 @@ import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
-import { addQuery } from "../../apis/home";
+import { addQuery } from "apis/home";
 import {
   Box,
   Button,
@@ -34,14 +34,16 @@ function ContactUs() {
               lastName: "",
               message: "",
               email: "",
-              contactNo: ""
+              contactNo: "",
             }}
             validationSchema={Yup.object({
               firstName: Yup.string().required("First Name is Required"),
               email: Yup.string()
                 .required("Email is Required")
                 .email("Email is invalid"),
-              contactNo: Yup.string().required("Contact Number is Required").length( 10, "Contact Number is invalid"),
+              contactNo: Yup.string()
+                .required("Contact Number is Required")
+                .length(10, "Contact Number is invalid"),
               message: Yup.string().required("Message is Required"),
             })}
             onSubmit={(values) => {
@@ -163,7 +165,9 @@ function ContactUs() {
                     style={{ marginTop: "10px" }}
                     error={touched.contactNo && errors.contactNo ? true : false}
                   >
-                    <InputLabel htmlFor="form-contactNo">Contact Number</InputLabel>
+                    <InputLabel htmlFor="form-contactNo">
+                      Contact Number
+                    </InputLabel>
                     <OutlinedInput
                       id="form-contactNo"
                       type="text"
@@ -173,10 +177,14 @@ function ContactUs() {
                       labelWidth={45}
                     />
                     <FormHelperText
-                      error={touched.contactNo && errors.contactNo ? true : false}
+                      error={
+                        touched.contactNo && errors.contactNo ? true : false
+                      }
                       id="contactNo-helper-text"
                     >
-                      {touched.contactNo && errors.contactNo ? errors.contactNo : null}
+                      {touched.contactNo && errors.contactNo
+                        ? errors.contactNo
+                        : null}
                     </FormHelperText>
                   </FormControl>
 

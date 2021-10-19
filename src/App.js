@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -6,17 +7,16 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-import Home from "./components/Home/Home";
-import Login from "./components/Login/Login";
-import Signup from "./components/Signup/Signup";
-import Feed from "./components/Feed/Feed";
-import BlogList from "./components/Blog/BlogList/BlogList";
-import { Box, Typography } from "@material-ui/core";
 import { ToastContainer } from "react-toastify";
+import { Box, Typography } from "@material-ui/core";
+import Home from "components/Home/Home";
+import Login from "components/Login/Login";
+import Signup from "components/Signup/Signup";
+import Feed from "components/Feed/Feed";
+import BlogList from "components/Blog/BlogList/BlogList";
+import AuthContextProvider, { AuthContext } from "store/AuthContext";
+import BlogPost from "components/Blog/BlogPost/BlogPost";
 import "react-toastify/dist/ReactToastify.css";
-import AuthContextProvider, { AuthContext } from "./store/AuthContext";
-import { useContext } from "react";
-import BlogPost from "./components/Blog/BlogPost/BlogPost";
 
 const notFound = () => {
   return (
