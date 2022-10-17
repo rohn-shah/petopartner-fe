@@ -40,25 +40,35 @@ function Home() {
               breed and different characteristics that the pet owner feels like
               a more suitable partner for their beloved pet
             </Typography>
+            <Typography className="textarea" variant="body1">
+              It is simply dummy text of the printing and typesetting industry. 
+               has been the industry's standard dummy text ever since the 1500s, 
+              when an unknown printer took a galley of type and scrambled it to make a type 
+              specimen book. It has survived not only five centuries, but also the leap into 
+              electronic typesetting, remaining essentially unchanged. It was popularised in 
+              the 1960s with the release of Letraset sheets containing  passages, 
+              and more recently with desktop publishing software like Aldus PageMaker including 
+              versions of 
+            </Typography>
           </Grid>
           <Grid item sm={4} md={4} lg={4} className="home__secondSlideRight">
             <Card style={{ height: "auto" }}>
               <Post
                 dog={{
-                  age: "3",
+                  age: "5",
                   breed: "Dachshund",
-                  name: "Tom",
+                  name: "Jerry",
                   likes: [1, 2, 3],
                   user: {
                     firstName: "Jenny",
-                    lastName: "Doe",
+                    lastName: "Doe John",
                     photoURL:
                       "https://images.pexels.com/photos/4076339/pexels-photo-4076339.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
                   },
                   photoURL:
                     "https://images.pexels.com/photos/1139795/pexels-photo-1139795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                   description:
-                    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod magnam consequuntur laborum quidem ipsa reprehenderit tenetur, sit dolore saepe totam perspiciatis ullam voluptatibus ea aut ut omnis veniam dolorem doloribus.",
+                    ", dolor sit amet consectetur adipisicing elit. Quod magnam consequuntur laborum quidem ipsa reprehenderit tenetur, sit dolore saepe totam perspiciatis ullam voluptatibus ea aut ut omnis veniam dolorem doloribus.",
                 }}
                 isDemo={true}
               />

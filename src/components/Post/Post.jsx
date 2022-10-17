@@ -93,6 +93,12 @@ function Post({ dog, isDemo }) {
               {`${breed} - ${age}`}
             </Typography>
           </Typography>
+          <Typography variant="body1" className="text-bold">
+            {`${user}  - `}{" "}
+            <Typography variant="body2" component="i">
+              {`${name} - ${location}`}
+            </Typography>
+          </Typography>
           <Typography variant="body2">{description}</Typography>
         </div>
       </div>
